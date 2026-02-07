@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ujjwal ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+  overflow: hidden;
+}
+
+h1, h2, p {
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.container {
+  padding: 20px;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff2f92;
+  color: white;
+}
+
+#no {
+  background: #444;
+  color: white;
+  position: absolute;
+  left: 55%;
+  top: 70%;
+}
+
+.day {
+  background: rgba(255,255,255,0.25);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.heart {
+  position: fixed;
+  font-size: 22px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="https://www.myinstants.com/media/sounds/oh-no-no-no.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>Ujjwal Pareek 💘</h1>
+  <h2>Tum mujhse pyar ni krte ky? 😏</h2>
+
+  <p>
+    Mahila mittar song yaad hai? <br>
+    <b>"Chor mahila mittar ka chakkar,  
+    main bahu ban ke aa jaungi"</b> 😈❤️
+  </p>
+
+  <h2>🌹 Valentine Week Proposal 🌹</h2>
+
+  <div class="day">🌹 Rose Day – Tum meri rose ho</div>
+  <div class="day">🍫 Chocolate Day – Meethi meethi fights</div>
+  <div class="day">🧸 Teddy Day – Chipku version of me</div>
+  <div class="day">🤝 Promise Day – Life long trouble promise</div>
+  <div class="day">🤗 Hug Day – Permission without limit</div>
+  <div class="day">💋 Kiss Day – Blushing allowed</div>
+  <div class="day">❤️ Valentine’s Day – You are trapped with me lifelong</div>
+
+  <br>
+
+  <button id="yes" onclick="yesClick()">YES ❤️</button>
+  <button id="no" onmouseover="moveNo()">NO 🙈</button>
+</div>
+
+<script>
+function moveNo() {
+  const no = document.getElementById("no");
+  no.style.left = Math.random() * 80 + "vw";
+  no.style.top = Math.random() * 80 + "vh";
+}
+
+function yesClick() {
+  document.getElementById("bgMusic").play();
+
+  document.body.innerHTML = `
+    <h1>Oh no 😈💖</h1>
+    <h2>Valentine Week successfully completed 😌</h2>
+    <h2>You are officially mine 💍</h2>
+  `;
+}
+
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️ 💖 🍕";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}, 700);
+</script>
+
+</body>
+</html>
